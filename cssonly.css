@@ -1,0 +1,21 @@
+.hero-banner {
+  width: 100%;
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(90deg, #02203c, #001528);
+  color: white;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.hero-banner h1 {
+  font-size: 36px;
+  color: #ff8c1a; /* Orange like your sample */
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero-banner p {
+  font-size: 16px;
+  color: #e0e0e0;
+}
