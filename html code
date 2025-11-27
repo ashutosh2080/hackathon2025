@@ -1,0 +1,60 @@
+<!-- auth.html -->
+<link rel="stylesheet" href="auth.css" />
+
+<!-- AUTH BUTTON (place in your navbar where you want it) -->
+<div id="authContainer" class="auth-container">
+  <button id="authBtn" class="auth-btn">Sign up / Sign in</button>
+</div>
+
+<!-- AUTH MODAL -->
+<div id="authModal" class="auth-modal hidden" aria-hidden="true">
+  <div class="auth-backdrop"></div>
+
+  <div class="auth-card" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+    <div class="auth-header">
+      <h3 id="authTitle" class="auth-title">Sign up</h3>
+      <button id="closeAuth" class="auth-close">✕</button>
+    </div>
+
+    <div class="auth-body">
+
+      <!-- Sign Up Form -->
+      <form id="signupForm" class="auth-form">
+        <label class="auth-label">Name
+          <input id="su_name" class="auth-input" placeholder="Full name" required />
+        </label>
+
+        <label class="auth-label">Location
+          <input id="su_location" class="auth-input" placeholder="City / Area" required />
+        </label>
+
+        <label class="auth-label">Phone Number
+          <input id="su_phone" class="auth-input" placeholder="Phone number" required />
+        </label>
+
+        <div class="auth-actions">
+          <button type="submit" class="auth-submit">Create account</button>
+          <button type="button" id="toSignIn" class="auth-toggle">Already have an account?</button>
+        </div>
+      </form>
+
+      <!-- Sign In Form -->
+      <form id="signinForm" class="auth-form hidden">
+        <label class="auth-label">Phone Number
+          <input id="si_phone" class="auth-input" placeholder="Enter phone to sign in" required />
+        </label>
+
+        <div class="auth-actions">
+          <button type="submit" class="auth-submit alt">Sign in</button>
+          <button type="button" id="toSignUp" class="auth-toggle">Create a new account</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div id="authToast" class="auth-toast hidden"><span id="authToastText"></span></div>
+
+<script src="auth.js"></script>
