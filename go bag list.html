@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AlertNet – Emergency Go-Bag Checklist</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+    body {
+        font-family: "Inter", sans-serif;
+        background: 
+          linear-gradient( rgba(0,0,0,0.65), rgba(0,0,0,0.75) ),
+          url("https://images.unsplash.com/photo-1609220136736-1a5b0a2a3c6b?auto=format&fit=crop&w=1350&q=80") 
+          center/cover no-repeat fixed;
+    }
+
+    .glass-card {
+        background: rgba(255,255,255,0.12);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .check-item {
+        transition: 0.25s;
+    }
+    .check-item:hover {
+        transform: translateX(10px);
+        color: #60a5fa;
+    }
+
+    /* Icon circle */
+    .icon-wrapper {
+        width: 80px;
+        height: 80px;
+        background: rgba(255,255,255,0.18);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255,255,255,0.25);
+        animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+    }
+</style>
+</head>
+
+<body class="min-h-screen p-6 flex items-center justify-center">
+    
+
+<!-- MAIN CARD -->
+<div class="max-w-3xl w-full mx-auto glass-card rounded-3xl p-10 shadow-2xl">
+
+    <!-- LOGO + TITLE -->
+    <div class="text-center">
+        <div class="icon-wrapper mx-auto mb-4">🎒</div>
+        <h1 class="text-4xl font-extrabold text-red-400 drop-shadow-lg">AlertNet</h1>
+        <p class="text-gray-200 mt-2 text-lg">Ultimate Emergency Go-Bag Checklist</p>
+    </div>
+
+    <!-- Divider -->
+    <div class="h-[1px] bg-white/20 my-8"></div>
+
+    <!-- Subtitle -->
+    <p class="text-gray-300 text-center max-w-xl mx-auto mb-8 text-lg">
+        A 48-hour survival kit for floods, earthquakes, cyclones, fires, and emergency evacuations.
+    </p>
+
+    <!-- Items Grid -->
+    <ul class="space-y-4 text-xl">
+        <li class="check-item flex items-center gap-4">
+           
+            Water (3 liters per person per day)
+        </li>
+
+        <li class="check-item flex items-center gap-4">
+            
+            Non-perishable food (minimum 3 days)
+        </li>
+
+        <li class="check-item flex items-center gap-4">
+            
+            Flashlight + extra batteries
+        </li>
+
+        <li class="check-item flex items-center gap-4">
+            
+            First-aid kit & essential medicines
+        </li>
+
+        <li class="check-item flex items-center gap-4">
+            
+            
+            Waterproof pouch with ID & documents
+        </li>
+
+        <li class="check-item flex items-center gap-4">
+           
+            Power bank + charging cables
+        </li>
+
+        <li class="check-item flex items-center gap-4">
+            
+            Warm clothing, sturdy shoes & emergency cash
+        </li>
+    </ul>
+
+   
+           
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

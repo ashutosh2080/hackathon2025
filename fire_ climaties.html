@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AlertNet – Fire Emergency Guide</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+    body {
+        font-family: "Inter", sans-serif;
+        background: 
+          linear-gradient( rgba(0,0,0,0.65), rgba(0,0,0,0.75) ),
+          url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80") 
+          center/cover no-repeat fixed;
+    }
+
+    .glass-card {
+        background: rgba(255,255,255,0.10);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .check-item {
+        transition: 0.25s;
+    }
+
+    .check-item:hover {
+        transform: translateX(10px);
+        color: #60a5fa;
+    }
+
+    .icon-wrapper {
+        width: 80px;
+        height: 80px;
+        background: rgba(255,255,255,0.18);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        backdrop-filter: blur(12px);
+        border: 2px solid rgba(255,255,255,0.25);
+        animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+    }
+</style>
+</head>
+
+<body class="min-h-screen p-6 flex items-center justify-center">
+
+<!-- MAIN CARD -->
+<div class="max-w-3xl w-full mx-auto glass-card rounded-3xl p-10 shadow-2xl">
+
+    <!-- LOGO + TITLE -->
+    <div class="text-center">
+        <div class="icon-wrapper mx-auto mb-4">🔥</div>
+        <h1 class="text-4xl font-extrabold text-red-400 drop-shadow-lg">AlertNet</h1>
+        <p class="text-gray-200 mt-2 text-lg">Fire Emergency Action Guide</p>
+    </div>
+
+    <!-- Divider -->
+    <div class="h-[1px] bg-white/20 my-8"></div>
+
+    <!-- Subtitle -->
+    <p class="text-gray-300 text-center max-w-2xl mx-auto mb-10 text-lg">
+        Follow these steps immediately during a fire to protect yourself and others.
+    </p>
+
+    <!-- Steps Section -->
+    <ul class="space-y-6 text-xl">
+
+        <li class="check-item flex items-start gap-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/1827/1827370.png" class="w-10 opacity-90">
+            <p><strong class="text-blue-300">1. Alert everyone:</strong> Warn others and call the Fire Brigade (101) immediately.</p>
+        </li>
+
+        <li class="check-item flex items-start gap-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/603/603197.png" class="w-10 opacity-90">
+            <p><strong class="text-blue-300">2. Use fire extinguisher:</strong> If the fire is small and safe, aim at the base of the flames when using an extinguisher.</p>
+        </li>
+
+        <li class="check-item flex items-start gap-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/5720/5720488.png" class="w-10 opacity-90">
+            <p><strong class="text-blue-300">3. Evacuate immediately:</strong> Leave the building quickly and stay low to avoid smoke inhalation.</p>
+        </li>
+
+        <li class="check-item flex items-start gap-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/3144/3144981.png" class="w-10 opacity-90">
+            <p><strong class="text-blue-300">4. Close doors behind you:</strong> This helps slow the spread of fire and smoke.</p>
+        </li>
+
+        <li class="check-item flex items-start gap-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/753/753345.png" class="w-10 opacity-90">
+            <p><strong class="text-blue-300">5. Do not re-enter:</strong> Never go back inside a burning building. Wait for firefighters.</p>
+        </li>
+
+    </ul>
+
+    <!-- Button -->
+    <div class="text-center mt-10">
+       
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>
