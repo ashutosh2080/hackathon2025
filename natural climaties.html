@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AlertNet – Natural Calamity Guide</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+    body {
+        font-family: "Inter", sans-serif;
+        background: 
+          linear-gradient( rgba(0,0,0,0.65), rgba(0,0,0,0.75) ),
+          url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=80") 
+          center/cover no-repeat fixed;
+    }
+
+    .glass-card {
+        background: rgba(255,255,255,0.10);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .check-item {
+        transition: 0.25s;
+    }
+    .check-item:hover {
+        transform: translateX(10px);
+        color: #60a5fa;
+    }
+
+    .icon-wrapper {
+        width: 80px;
+        height: 80px;
+        background: rgba(255,255,255,0.18);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        backdrop-filter: blur(12px);
+        border: 2px solid rgba(255,255,255,0.25);
+        animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+    }
+</style>
+</head>
+
+<body class="min-h-screen p-6 flex items-center justify-center">
+
+<!-- MAIN CARD -->
+<div class="max-w-3xl w-full mx-auto glass-card rounded-3xl p-10 shadow-2xl">
+
+    <!-- LOGO + TITLE -->
+    <div class="text-center">
+        <div class="icon-wrapper mx-auto mb-4">🌪️</div>
+        <h1 class="text-4xl font-extrabold text-red-400 drop-shadow-lg">AlertNet</h1>
+        <p class="text-gray-200 mt-2 text-lg">Natural Calamity Preparedness Guide</p>
+    </div>
+
+    <!-- Divider -->
+    <div class="h-[1px] bg-white/20 my-8"></div>
+
+    <!-- Subtitle -->
+    <p class="text-gray-300 text-center max-w-2xl mx-auto mb-10 text-lg">
+        Follow these essential steps before, during, and after any natural calamity to stay safe.
+    </p>
+
+    <!-- Items Section -->
+    <ul class="space-y-6 text-xl">
+
+        <li class="check-item flex items-start gap-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/1584/1584929.png" class="w-10 opacity-90">
+            <p><strong class="text-blue-300">1. Stay informed:</strong> Always follow IMD alerts, government warnings, radio updates, and mobile emergency notifications.</p>
+        </li>
+
+        <li class="check-item flex items-start gap-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png" class="w-10 opacity-90">
+            <p><strong class="text-blue-300">2. Prepare an emergency kit:</strong> Include water, food, torch, power bank, medicines, first-aid kit, and important documents.</p>
+        </li>
+
+        <li class="check-item flex items-start gap-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/535/535239.png" class="w-10 opacity-90">
+            <p><strong class="text-blue-300">3. Evacuation plan:</strong> Know safe assembly points, nearby shelters, and evacuation routes in your locality.</p>
+        </li>
+
+        <li class="check-item flex items-start gap-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/4611/4611245.png" class="w-10 opacity-90">
+            <p><strong class="text-blue-300">4. During the disaster:</strong> Stay calm, move to a safe place, follow official instructions, and avoid risky areas like floodwaters and unstable buildings.</p>
+        </li>
+
+        <li class="check-item flex items-start gap-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/2892/2892507.png" class="w-10 opacity-90">
+            <p><strong class="text-blue-300">5. After the disaster:</strong> Check for injuries, avoid damaged structures, boil drinking water, and stay aware of aftershocks or secondary hazards.</p>
+        </li>
+
+    </ul>
+
+    <!-- Button -->
+    
+
+</div>
+
+</body>
+</html>
