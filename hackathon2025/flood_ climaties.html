@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AlertNet – Flood Safety Checklist</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+    body {
+        font-family: "Inter", sans-serif;
+        background:
+          linear-gradient( rgba(0,0,0,0.75), rgba(0,0,0,0.85) ),
+          url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80")
+          center/cover no-repeat fixed;
+        color: #f1f5f9; /* Light slate text */
+    }
+
+    .glass-card {
+        background: rgba(20, 20, 20, 0.55);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    h1 {
+        color: #f87171 !important; /* Softer red, readable */
+    }
+
+    p, li, strong {
+        color: #e5e7eb !important; /* Light readable gray */
+    }
+
+    .check-item {
+        transition: 0.25s;
+        color: #e5e7eb;
+    }
+
+    .check-item:hover {
+        transform: translateX(10px);
+        color: #93c5fd; /* better blue for dark bg */
+    }
+
+    .icon-wrapper {
+        width: 80px;
+        height: 80px;
+        background: rgba(255,255,255,0.15);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        backdrop-filter: blur(14px);
+        border: 2px solid rgba(255,255,255,0.20);
+        animation: float 3s ease-in-out infinite;
+        color: #fff;
+    }
+
+    .step-icon {
+        filter: brightness(0) invert(1) opacity(0.9); /* Makes icons readable on dark */
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+    }
+</style>
+
+</head>
+
+<body class="min-h-screen p-6 flex items-center justify-center">
+
+<!-- MAIN CARD -->
+<div class="max-w-3xl w-full mx-auto glass-card rounded-3xl p-10 shadow-2xl">
+
+    <!-- LOGO + TITLE -->
+    <div class="text-center">
+        <div class="icon-wrapper mx-auto mb-4">🌊</div>
+        <h1 class="text-4xl font-extrabold text-red-400 drop-shadow-lg">AlertNet</h1>
+        <p class="text-gray-200 mt-2 text-lg">Flood Safety Checklist</p>
+    </div>
+
+    <!-- Divider -->
+    <div class="h-[1px] bg-white/20 my-8"></div>
+
+    <!-- Subtitle -->
+    <p class="text-gray-300 text-center max-w-2xl mx-auto mb-10 text-lg">
+        Use this essential checklist to stay safe and prepared before and during floods.
+    </p>
+
+    <!-- CONTENT -->
+    <ul class="space-y-8 text-xl">
+
+        <!-- High Ground -->
+        <li class="check-item flex items-start gap-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/252/252025.png" class="w-10 opacity-90">
+            <p>
+                <strong class="text-blue-300">Identify high ground:</strong><br>
+                Know safe elevated areas and emergency evacuation routes in your locality.
+            </p>
+        </li>
+
+        <!-- Go Bag -->
+        <li class="check-item flex items-start gap-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/3179/3179068.png" class="w-10 opacity-90">
+            <p>
+                <strong class="text-blue-300">Prepare a 48-hour Go-Bag:</strong><br>
+                Water, non-perishable food, medicines, first-aid kit, and essential documents.
+            </p>
+        </li>
+
+        <!-- Waterproof Docs -->
+        <li class="check-item flex items-start gap-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/3209/3209265.png" class="w-10 opacity-90">
+            <p>
+                <strong class="text-blue-300">Store documents safely:</strong><br>
+                Keep important documents sealed in waterproof bags.
+            </p>
+        </li>
+
+        <!-- Move Valuables -->
+        <li class="check-item flex items-start gap-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/3113/3113070.png" class="w-10 opacity-90">
+            <p>
+                <strong class="text-blue-300">Move valuables to higher ground:</strong><br>
+                Keep electronics, cash, jewelry, and essentials on upper shelves or top floors.
+            </p>
+        </li>
+
+        <!-- Turn off utilities -->
+        <li class="check-item flex items-start gap-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/1046/1046857.png" class="w-10 opacity-90">
+            <p>
+                <strong class="text-blue-300">Turn off electricity & gas:</strong><br>
+                If advised by authorities, shut off power and gas supply for safety.
+            </p>
+        </li>
+
+        <!-- Avoid floodwaters -->
+        <li class="check-item flex items-start gap-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/565/565654.png" class="w-10 opacity-90">
+            <p>
+                <strong class="text-blue-300">Avoid floodwaters:</strong><br>
+                Never walk or drive through moving water. Even shallow water can be deadly.
+            </p>
+        </li>
+
+    </ul>
+
+    <!-- Button -->
+   
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AlertNet Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name ="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>AlertNet</title>
+  <link rel="icon" href="images/logo.jpeg" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel ="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- LINKING THE EXTERNAL CSS FILE -->
+
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- NAVBAR -->
+    <nav class="info-nav">
+        <a href="index.html"><img src="images/logo.jpeg"></a>
+        <div class="nav-links" id="navLinks">
+           <i class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="courses.html">SAFETY</a></li>
+                <li><a href="blog.html">NEWS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>                    
+                <li><a href="dashboard.html">ALERTS</a></li>
+            </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+        
+    </nav> 
+  <!-- LOGO IMAGE -->
+
+
+
+</div>
+
+  </nav>
+
+  <!-- MAIN -->
+  <main class="max-w-6xl mx-auto p-6">
+
+    <!-- LOCATION DROPDOWN -->
+    <div class="mb-6 flex gap-4 items-center">
+      <label class="text-gray-700 font-medium">Select Location:</label>
+
+      <select id="cityDropdown" class="border rounded px-3 py-2 text-sm">
+        <option value="">-- Select City --</option>
+        <option value="Kolkata">Kolkata</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Bhubaneswar">Bhubaneswar</option>
+      </select>
+
+      <button id="getWeatherBtn" class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm">
+        Get Weather
+      </button>
+    </div>
+
+    <!-- HERO BANNER -->
+<section class="hero-banner mb-10">
+  <h1>Stay Alert. Stay Prepared.</h1>
+  <p>Your trusted disaster-alert companion built specially for India.</p>
+</section>
+
+<!-- GRID CARDS -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+      <!-- Temperature Card -->
+      <div class="bg-white p-6 rounded-xl shadow border border-gray-200">
+        <h2 class="text-lg font-semibold text-yellow-600">🌡 Temperature</h2>
+        <p id="tempValue" class="text-3xl font-bold mt-3">18°C</p>
+        <p id="humidity" class="text-gray-600">Humidity: 10%</p>
+        <p id="weatherDesc" class="text-sm text-gray-500 mt-1">—</p>
+        <p id="lastUpdated" class="text-xs text-gray-400 mt-2">Last updated: — 22:01</p>
+      </div>
+
+      <!-- Flood Level Card -->
+      <div class="bg-white p-6 rounded-xl shadow border border-gray-200">
+        <h2 class="text-lg font-semibold text-red-600"> Live Updates</h2>
+        <p id="floodValue" class="text-3xl font-bold mt-3 text-gray-700">—</p>
+        <p id="floodReason" class="text-gray-500 text-sm mt-1">—</p>
+      </div>
+
+    </div>
+
+    <!-- MIDDLE BUTTONS -->
+    <div class="flex justify-center mt-10 gap-6">
+      <button id="guideBtn" class="bg-red-600 hover:bg-red-700 px-6 py-4 rounded-xl text-lg font-semibold text-white shadow-lg">
+  
+  <a href="toolkit.html"
+   class="bg-red-600 hover:bg-red-700 px-6 py-4 rounded-xl text-lg font-semibold text-white shadow-lg">
+  🚨 Emergency Guide
+</a>
+
+      </button>
+
+      <button id="numbersBtn" class="bg-yellow-500 hover:bg-yellow-600 px-6 py-4 rounded-xl text-lg font-semibold text-white shadow-lg">
+        ☎ Emergency Numbers
+      </button>
+    </div>
+
+    <!-- EMERGENCY GUIDELINES -->
+    <div class="mt-10 bg-white p-6 rounded-xl shadow border border-gray-200">
+      <h2 class="text-xl font-bold mb-3 text-sky-600">📘 Safety Recommendations</h2>
+      <ul class="space-y-2 text-gray-700">
+        <li>• Move immediately to higher ground.</li>
+        <li>• Disconnect all electrical appliances.</li>
+        <li>• Carry essential documents & medicine.</li>
+        <li>• Follow evacuation instructions from authorities.</li>
+        <li>• Store clean drinking water in sealed containers.</li>
+        <li>• Keep your mobile phone fully charged.</li>
+        <li>• Stay tuned to local news and weather updates.</li>
+        <li>• Avoid walking or driving through floodwaters.</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- POPUP FOR EMERGENCY NUMBERS -->
+  <div id="numbersPopup" class="fixed inset-0 bg-black/40 hidden justify-center items-center">
+    <div class="bg-white p-6 rounded-xl shadow-xl w-80">
+      <h2 class="text-xl font-bold mb-3 text-red-600">Emergency Numbers</h2>
+      <ul class="text-gray-800 space-y-2">
+        <li>🔥 Fire Brigade: <strong>101</strong></li>
+        <li>🚑 Ambulance: <strong>102 or 108</strong></li>
+        <li>🚔 Police: <strong>100</strong></li>
+      </ul>
+
+      <button id="closePopup" class="mt-5 w-full bg-gray-800 text-white py-2 rounded-lg">
+        Close
+      </button>
+    </div>
+  </div>
+
+<script>
+/* WEATHER LOGIC (unchanged) */
+const API_KEY = "YOUR_OPENWEATHERMAP_API_KEY";
+const cityDropdown = document.getElementById("cityDropdown");
+const getWeatherBtn = document.getElementById("getWeatherBtn");
+
+const tempValue = document.getElementById("tempValue");
+const humidity = document.getElementById("humidity");
+const weatherDesc = document.getElementById("weatherDesc");
+const lastUpdated = document.getElementById("lastUpdated");
+const floodValue = document.getElementById("floodValue");
+const floodReason = document.getElementById("floodReason");
+
+getWeatherBtn.addEventListener("click", () => {
+  const city = cityDropdown.value;
+  if (!city) {
+    alert("Select a city first.");
+    return;
+  }
+  fetchWeather(city);
+});
+
+function fetchWeather(city) {
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`)
+    .then(res => res.json())
+    .then(data => updateWeather(data))
+    .catch(() => alert("Error fetching weather"));
+}
+
+function updateWeather(data) {
+  const t = data.main.temp;
+  const hum = data.main.humidity;
+  const desc = data.weather[0].description;
+
+  tempValue.textContent = `${Math.round(t)}°C`;
+  humidity.textContent = `Humidity: ${hum}%`;
+  weatherDesc.textContent = desc;
+  lastUpdated.textContent = "Last updated: " + new Date().toLocaleString();
+
+  const rain = data.rain?.["1h"] || 0;
+
+  if (rain >= 20) {
+    floodValue.textContent = "HIGH";
+    floodValue.className = "text-3xl font-bold text-red-600";
+    floodReason.textContent = `Heavy rainfall: ${rain} mm`;
+  } else if (rain >= 5) {
+    floodValue.textContent = "MODERATE";
+    floodValue.className = "text-3xl font-bold text-yellow-600";
+    floodReason.textContent = `Moderate rain: ${rain} mm`;
+  } else {
+    floodValue.textContent = "LOW";
+    floodValue.className = "text-3xl font-bold text-green-600";
+    floodReason.textContent = "No major rainfall";
+  }
+}
+
+/* POPUP */
+const numbersBtn = document.getElementById("numbersBtn");
+const numbersPopup = document.getElementById("numbersPopup");
+const closePopup = document.getElementById("closePopup");
+
+numbersBtn.addEventListener("click", () => {
+  numbersPopup.classList.remove("hidden");
+  numbersPopup.classList.add("flex");
+});
+
+closePopup.addEventListener("click", () => {
+  numbersPopup.classList.add("hidden");
+  numbersPopup.classList.remove("flex");
+});
+</script>
+
+</body>
+</html>

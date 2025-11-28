@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name ="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Rudranta</title>
+    <title>AlertNet</title>
     <link rel="icon" href="images/logo.jpeg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,80 +14,101 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <section class="header" >
+    <section class="group" >
         <nav>
             <a href="index.html"><img src="images/logo.jpeg"></a>
             <div class="nav-links" id="navLinks">
                <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="index.html">HOME</a></li>
-                    <li><a href="courses.html">SAFETY</a></li>
-                    <li><a href="blog.html">NEWS</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>                    
+                    <li><a href=".html">SAFETY</a></li>
+                    <li><a href=".html">NEWS</a></li>
+                    <li><a href=".html">CONTACT</a></li>                    
                     <li><a href="dashboard.html">ALERTS</a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" onclick="showMenu()"></i>
             
-        </nav> 
-        <div class="losi">
-            <a href="login.html"><h4>Login / SignUp</h4></a>            
+        </nav>  
+        <div class="a-dash">
+            <p></p>
 
-        </div>        
-        <div class="text-box">
-            <h1>AlertNet</h1>
-            <p>AlertNet is a governments approach for disaster and it's response.</p>  
         </div>
+        <div class="alert-form">
+    <h2>Create Alert</h2>
 
+    <input type="text" id="alertName" placeholder="Alert Name">
+
+    <select id="seriousness">
+        <option value="">Seriousness</option>
+        <option value="1">1 - Low</option>
+        <option value="2">2 - Medium</option>
+        <option value="3">3 - High</option>
+    </select>
+
+    <input type="text" id="alertMessage" placeholder="Alert Message">
+    <input type="text" id="location" placeholder="Location">
+    <input type="time" id="time">
+
+    <button id="createBtn">Create Alert</button>
+</div>
+
+<div id="alertList"></div>
+
+
+    
     </section>
 
-     
-<!----------------------------------------------------------footer------------------------------------------------------------>
+
+
+
+ <!----------------------------------------------------------footer------------------------------------------------------------>
 
 
 
 <section class="sub-footer">
    
     <div class="abus">
-        <h4>About  Us</h4>
-        <p>At <i><b>AlertNet</b></i> we help strengthening disaster readiness with real-time alerts and simple, 
-            actionable guidance</p>
+        <img src="images/messlogofav.png">
+        <h4>About  US</h4>
+        <p>At <i><b>MessMap</b></i> we are committed to help you find your friends to eat and gossip together.To not missout the hot 
+            tea of the college (ifyyk).Friends help eat the bland food of mess ,that's why we are here to save your taste.</p>
            
        </div>
        <div class="abus sfc">
         
         <h4>Useful Links</h4>
-        <a href ="index.html.">Home</a>
-        <a href =".html">News</a>
-        <a href =".html">Contact</a>
-        <a href ="dashboard.html">Alerts</a>
+        <a href ="index.html">Home</a>
+        <a href ="">About Us</a>
+        <a href ="">Contact</a>
+        <a href ="">Blog</a>
+       
            
        </div>
        <div class="abus sfc">        
-        <h4>Info</h4>
-        <a href ="toolkit.html">Emergency Guide</a> 
-        <a href ="dashboard.html">Dashboard</a>
-        <a href ="">Alert Centers</a>
-        <a href =".html">Safety</a>
+        <h4>Blog</h4>
+        <a href ="">College</a> 
+        <a href ="">Event</a>
+        <a href ="">Hot Topics</a>
+        
         
         
            
        </div>
      <div class="abus rfc"><h4>Contact US</h4>
-     <p class="contact-detail">9876543210,<br>info@Alertnet.com</p>
+     <p class="contact-detail">9482967870,<br>ashutoshjha@rudranta.com</p>
      
         <div class="icons">
-            <a href=""><i class="fa fa-facebook"></i></a>
-            <i class="fa fa-instagram"></i>
-            <i class="fa fa-twitter"></i>
-            <i class="fa fa-linkedin"></i>
+            <a href=""><i class="fa fa-envelope"></i></a>
+            <a href="https://www.instagram.com/ashutoshjha_470/"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/ashutosh-kumar-jha-381604303/"><i class="fa fa-linkedin"></i></a>
         </div>
     </div>
     
    
 
 </section>
-<div class="cred"><h5>All rights reserved by <i><b>Vision</b></i></h5></div>
+<div class="cred"><h5>All rights reserved by <i><b>ASHUTOSH KUMAR JHA</b></i></h5></div>
 
 
 
@@ -107,8 +128,11 @@
     function hideMenu(){
     navLinks.style.right = "-200px"; 
     }
+    document.getElementById("createBtn").onclick = function () {
+    window.location.href = "dashboard.html";
+};
 
 </script>
-    
+<script src="alert.js"></script>
 </body>
 </html>
