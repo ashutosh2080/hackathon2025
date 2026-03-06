@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Octoboard — Ecommerce Suite / Customers</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- ── SIDEBAR ─────────────────────────────── -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2.5"/><circle cx="16" cy="16" r="5" fill="currentColor"/></svg>
+      </div>
+      <span class="logo-text">octoboard</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="7" height="7" rx="1.5" fill="currentColor" opacity=".4"/><rect x="11" y="2" width="7" height="7" rx="1.5" fill="currentColor"/><rect x="2" y="11" width="7" height="7" rx="1.5" fill="currentColor" opacity=".4"/><rect x="11" y="11" width="7" height="7" rx="1.5" fill="currentColor" opacity=".4"/></svg>
+        <span>Dashboards</span>
+        <span class="nav-action">View all</span>
+      </div>
+      <div class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="2" rx="1" fill="currentColor" opacity=".4"/><rect x="3" y="7" width="10" height="2" rx="1" fill="currentColor" opacity=".4"/><rect x="3" y="11" width="12" height="2" rx="1" fill="currentColor" opacity=".4"/><rect x="3" y="15" width="8" height="2" rx="1" fill="currentColor" opacity=".4"/></svg>
+        <span>Reports</span>
+        <span class="nav-action">View all</span>
+      </div>
+      <div class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="7" r="4" stroke="currentColor" stroke-width="1.8" opacity=".5"/><path d="M3 17c0-3.314 3.134-6 7-6s7 2.686 7 6" stroke="currentColor" stroke-width="1.8" opacity=".5" stroke-linecap="round"/></svg>
+        <span>Clients</span>
+        <span class="nav-action">View all</span>
+      </div>
+      <div class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 20 20" fill="none"><path d="M3 10a7 7 0 1 1 14 0 7 7 0 0 1-14 0z" stroke="currentColor" stroke-width="1.8" opacity=".5"/><path d="M10 6v4l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" opacity=".5"/></svg>
+        <span>Connections</span>
+      </div>
+
+      <div class="nav-section active">
+        <div class="nav-item active">
+          <svg class="nav-icon" viewBox="0 0 20 20" fill="none"><path d="M5 3h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8"/><path d="M7 8h6M7 12h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span>E-commerce Suite</span>
+        </div>
+        <div class="nav-sub">
+          <div class="nav-sub-item">Overview</div>
+          <div class="nav-sub-item">Sales</div>
+          <div class="nav-sub-item">Orders</div>
+          <div class="nav-sub-item active">Customers</div>
+          <div class="nav-sub-item">Refunds</div>
+          <div class="nav-sub-item">Products</div>
+          <div class="nav-sub-item">Taxes</div>
+          <div class="nav-sub-item">Transactions</div>
+        </div>
+      </div>
+
+      <div class="nav-item sub-config">
+        <svg class="nav-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="2.5" stroke="currentColor" stroke-width="1.8" opacity=".5"/><path d="M10 3v2M10 15v2M3 10h2M15 10h2M5.05 5.05l1.41 1.41M13.54 13.54l1.41 1.41M5.05 14.95l1.41-1.41M13.54 6.46l1.41-1.41" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".5"/></svg>
+        <span>Configuration</span>
+      </div>
+      <div class="nav-item sub-config">
+        <svg class="nav-icon" viewBox="0 0 20 20" fill="none"><path d="M3 10a7 7 0 1 1 14 0 7 7 0 0 1-14 0z" stroke="currentColor" stroke-width="1.8" opacity=".5"/><path d="M7 10l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/></svg>
+        <span>Connections</span>
+      </div>
+      <div class="nav-item sub-config">
+        <svg class="nav-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="3" stroke="currentColor" stroke-width="1.8" opacity=".5"/><path d="M10 3v1M10 16v1M3 10h1M16 10h1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".5"/></svg>
+        <span>Data Monitoring</span>
+      </div>
+
+      <div class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 20 20" fill="none"><path d="M3 15l4-6 3 4 3-3 4 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/></svg>
+        <span>PPC Analytics</span>
+      </div>
+      <div class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 20 20" fill="none"><path d="M4 16V9M8 16V4M12 16v-6M16 16v-9" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".5"/></svg>
+        <span>Insights</span>
+        <span class="nav-action">View all</span>
+      </div>
+      <div class="nav-item">
+        <svg class="nav-icon" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="3" stroke="currentColor" stroke-width="1.8" opacity=".5"/><path d="M10 3v1M10 16v1M3 10h1M16 10h1M5.05 5.05l.7.7M14.25 14.25l.7.7M5.05 14.95l.7-.7M14.25 5.75l.7-.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity=".5"/></svg>
+        <span>Settings</span>
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="#">Feedback</a>
+      <a href="#">Docs</a>
+      <a href="#">Support</a>
+    </div>
+  </aside>
+
+  <!-- ── MAIN CONTENT ───────────────────────── -->
+  <main class="main">
+
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="topbar-breadcrumb">
+          <div class="breadcrumb-chip">
+            <svg viewBox="0 0 16 16" fill="none"><rect x="1" y="1" width="6" height="6" rx="1" fill="currentColor" opacity=".5"/><rect x="9" y="1" width="6" height="6" rx="1" fill="currentColor"/><rect x="1" y="9" width="6" height="6" rx="1" fill="currentColor" opacity=".5"/><rect x="9" y="9" width="6" height="6" rx="1" fill="currentColor" opacity=".3"/></svg>
+            Ecommerce Suite / Customers
+            <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <div class="breadcrumb-chip secondary">
+            <div class="status-dot"></div>
+            Octoboard
+            <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <div class="breadcrumb-chip secondary">
+            <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M8 5v3l2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Previous month, da…
+            <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <button class="icon-btn">
+          <svg viewBox="0 0 20 20" fill="none"><path d="M10 3a7 7 0 1 1 0 14A7 7 0 0 1 10 3zm0 3v4l3 3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        </button>
+        <button class="icon-btn with-arrow">
+          <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="3" stroke="currentColor" stroke-width="1.7"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.22 4.22l1.42 1.42M14.36 14.36l1.42 1.42M4.22 15.78l1.42-1.42M14.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <button class="icon-btn with-arrow">
+          <svg viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.7"/><path d="M15 15l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <svg class="chevron" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <button class="icon-btn">
+          <svg viewBox="0 0 20 20" fill="none"><path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- ── DASHBOARD GRID ─────────────────── -->
+    <div class="dashboard">
+
+      <!-- KPI Cards Row -->
+      <div class="kpi-row">
+        <div class="kpi-card" data-animate>
+          <div class="kpi-header">
+            <span class="kpi-icon">🛍️</span>
+            <div class="kpi-meta">
+              <span class="kpi-label">TOTAL CUSTOMERS</span>
+              <span class="kpi-period">Previous month, daily</span>
+            </div>
+          </div>
+          <div class="kpi-value" data-count="814">0</div>
+          <div class="kpi-delta positive">
+            <svg viewBox="0 0 12 12" fill="none"><path d="M6 2l4 8H2z" fill="currentColor"/></svg>
+            <span class="delta-num" data-count="814">0</span> / period
+          </div>
+        </div>
+
+        <div class="kpi-card" data-animate>
+          <div class="kpi-header">
+            <span class="kpi-icon">🛍️</span>
+            <div class="kpi-meta">
+              <span class="kpi-label">NEW CUSTOMERS SALE AMOUNT</span>
+              <span class="kpi-period">Previous month, daily</span>
+            </div>
+          </div>
+          <div class="kpi-value dollar" data-count="71300">$0</div>
+          <div class="kpi-delta positive">
+            <svg viewBox="0 0 12 12" fill="none"><path d="M6 2l4 8H2z" fill="currentColor"/></svg>
+            <span>40.25%</span> / period
+          </div>
+        </div>
+
+        <div class="kpi-card" data-animate>
+          <div class="kpi-header">
+            <span class="kpi-icon">🛍️</span>
+            <div class="kpi-meta">
+              <span class="kpi-label">ARPU</span>
+              <span class="kpi-period">Previous month, daily</span>
+            </div>
+          </div>
+          <div class="kpi-value dollar" data-count="78745">$0</div>
+          <div class="kpi-delta neutral">
+            <span class="kpi-note">Average Revenue Per User</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Charts Row -->
+      <div class="charts-row">
+        <!-- Bar chart -->
+        <div class="chart-card wide" data-animate>
+          <div class="chart-card-header">
+            <div>
+              <span class="chart-label">NEW VS RETURNING OVER TIME</span>
+              <span class="chart-period">Previous month, daily</span>
+            </div>
+            <div class="chart-legend">
+              <span class="legend-item new-cust">
+                <span class="legend-dot"></span>
+                <div>
+                  <div class="legend-val positive">57 <small>▲8.05% / period</small></div>
+                  <div class="legend-name">New Customers</div>
+                </div>
+              </span>
+              <span class="legend-item ret-cust">
+                <span class="legend-dot dark"></span>
+                <div>
+                  <div class="legend-val">456 <small>▲5.8% / period</small></div>
+                  <div class="legend-name">Returning Customers</div>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div class="chart-wrap">
+            <canvas id="barChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Donut chart -->
+        <div class="chart-card narrow" data-animate>
+          <div class="chart-card-header">
+            <div>
+              <span class="chart-label">NEW VS RETURNING</span>
+              <span class="chart-period">Previous month</span>
+            </div>
+          </div>
+          <div class="donut-wrap">
+            <canvas id="donutChart"></canvas>
+            <div class="donut-center">
+              <div class="donut-label">total</div>
+              <div class="donut-value">513</div>
+            </div>
+          </div>
+          <div class="donut-legend">
+            <div class="donut-legend-item">
+              <span class="dl-dot green"></span>
+              <span class="dl-name">New Customers</span>
+              <span class="dl-val">57 / 11%</span>
+            </div>
+            <div class="donut-legend-item">
+              <span class="dl-dot dark"></span>
+              <span class="dl-name">Returning Customers</span>
+              <span class="dl-val">456 / 89%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Row -->
+      <div class="bottom-row">
+
+        <!-- Top Customers -->
+        <div class="table-card" data-animate>
+          <div class="table-card-header">
+            <span class="kpi-icon">🛍️</span>
+            <div>
+              <span class="chart-label">TOP CUSTOMERS</span>
+              <span class="chart-period">Previous month</span>
+            </div>
+          </div>
+          <div class="customer-list" id="customerList">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+
+        <!-- Transactions Feed -->
+        <div class="table-card" data-animate>
+          <div class="table-card-header">
+            <span class="kpi-icon">🛍️</span>
+            <div>
+              <span class="chart-label">TRANSACTIONS FEED</span>
+              <span class="chart-period">Previous month</span>
+            </div>
+          </div>
+          <div class="tx-table">
+            <div class="tx-header">
+              <span>Source</span>
+              <span>Store</span>
+              <span>Message</span>
+              <span>Time</span>
+            </div>
+            <div id="txList">
+              <!-- Injected by JS -->
+            </div>
+          </div>
+          <div class="tx-footer">
+            <span>1–2 of 20</span>
+            <div class="tx-nav">
+              <button class="tx-btn">‹</button>
+              <button class="tx-btn">›</button>
+            </div>
+            <button class="fab">+</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
